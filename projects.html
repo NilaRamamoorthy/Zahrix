@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomePage</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+   <link rel="stylesheet" href="./asserts/css/header.css">
+    <link rel="stylesheet" href="./asserts/css/project.css">
+
+  <style>
+   
+    /* Hero Section */
+    .hero-section {
+      background: url("./asserts/images/Screenshot\ 2025-06-12\ 152226.png") center center / cover no-repeat;
+      height: 400px;
+      position: relative;
+      background-blend-mode: darken;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .breadcrumb-text {
+      margin-bottom: 10px;
+      margin-left: 200px;
+    }
+
+    .sparkling {
+      margin-left: 150px;
+    }
+
+    /* Main section */
+    .underline {
+      text-decoration: underline;
+      text-decoration-color: #0a0a0a;
+      text-decoration-thickness: 2px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container px-5">
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <img src="./asserts/images/Screenshot 2025-06-12 135749.png" alt="Logo" width="50" height="50" class="me-2">
+        <span class="fw-bold fs-4">ZAHRIX</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" href="./aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="" id="servicesDropdown" role="button"
+              data-bs-toggle="dropdown">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./electrical.html">Electrical</a></li>
+              <li><a class="dropdown-item" href="./cctv.html">CCTV</a></li>
+              <li><a class="dropdown-item" href="./bms.html">BMS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./projects.html">Projects</a>
+          </li>
+        </ul>
+      </div>
+      <a href="./contact.html" class="btn btn-light fw-semibold ms-auto">Get a Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section d-flex align-items-center text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="breadcrumb-text fw-bold fs-5">Home &nbsp; ❯&nbsp; <span class="text-white">Projects</span></p>
+          <h5 class="sparkling fw-normal fs-6">Sparking Innovation, Illuminating Lives</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Section -->
+  <div class="text-center mt-5">
+    <h2 class="fw-bold fs-4">OUR PROJ<span class="mt-2 underline">ECTS </span><span><img class=""
+          src="./asserts/images/material-symbols_electric-bolt-outline.png"></span></h2>
+    <p class="fw-bold fs-4" style="color: #4B69A9;">Electric Solutions for a Brighter Environment</p>
+  </div>
+  <!-- Section 1  -->
+  <section class="py-5" id="sections">
+    <div class="container text-center">
+      <h1 class="fw-bold" style="color: #4B69A9;">01</h1>
+      <h3 class="fw-bold mb-4">Electrical Upgrade at ZAHRIX Office Complex</h3>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img src="./asserts/images/Screenshot 2025-06-12 102855.png" alt="Electrical Work 1"
+                class="card-img-top img-fluid w-100 rounded" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Site Inspection</h5>
+              <p class="small mb-5">Ensuring quality and safety standards through expert site evaluations and upgrades.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img
+                src="./asserts/images/renovation-profile-concentrated-man-touching-screwdriver-lamp-kitchen-range-hood.png"
+                alt="Electrical Work 2" class="card-img-top img-fluid w-100" style="border-radius: 8px;" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Wiring</h5>
+              <p class="small mb-5">Efficient electrical wiring solutions with top-grade materials and expert
+                installation techniques.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img src="./asserts/images/electrician-overalls-focused-work-switchboard-with-fuses-using-tablet.png"
+                alt="Electrical Work 3" class="card-img-top img-fluid w-100 rounded" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Panel Fixing</h5>
+              <p class="small mb-5">Professional panel fixing ensuring operational safety, efficiency, and system
+                longevity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Section 2  -->
+  <section class="py-5 mt-5" id="sections">
+    <div class="container text-center">
+      <h1 class="fw-bold" style="color: #4B69A9;">02</h1>
+      <h3 class="fw-bold mb-4">CCTV Installation at Abc Retail Store</h3>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img src="./asserts/images/jk.png" alt="Electrical Work 1" class="card-img-top img-fluid w-100 rounded" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Site Inspection</h5>
+              <p class="small mb-5">Ensuring quality and safety standards through expert site evaluations and upgrades.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img src="./asserts/images/j.png" alt="Electrical Work 2" class="card-img-top img-fluid w-100"
+                style="border-radius: 8px;" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Wiring</h5>
+              <p class="small mb-5">Efficient electrical wiring solutions with top-grade materials and expert
+                installation techniques.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img src="./asserts/images/k.png" alt="Electrical Work 3" class="card-img-top img-fluid w-100 rounded" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Panel Fixing</h5>
+              <p class="small mb-5">Professional panel fixing ensuring operational safety, efficiency, and system
+                longevity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!-- Section 3  -->
+  <section class="py-5 mt-5 mb-6" id="sections">
+    <div class="container text-center">
+      <h1 class="fw-bold" style="color: #4B69A9;">03</h1>
+      <h3 class="fw-bold mb-4">BMS Integration at DEF Hospital</h3>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img src="./asserts/images/Screenshot 2025-06-12 102855 h.png" alt="Electrical Work 1"
+                class="card-img-top img-fluid w-100 rounded" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Site Inspection</h5>
+              <p class="small mb-5">Ensuring quality and safety standards through expert site evaluations and upgrades.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img src="./asserts/images/aj.png" alt="Electrical Work 2" class="card-img-top img-fluid w-100"
+                style="border-radius: 8px;" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Wiring</h5>
+              <p class="small mb-5">Efficient electrical wiring solutions with top-grade materials and expert
+                installation techniques.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img src="./asserts/images/kp.png" alt="Electrical Work 3" class="card-img-top img-fluid w-100 rounded" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Panel Fixing</h5>
+              <p class="small mb-5">Professional panel fixing ensuring operational safety, efficiency, and system
+                longevity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <div class="container-fluid d-flex gap-5 justify-content-center mt-5 p-4 mb-5 flex-wrap flex-md-nowrap" style="background-color: #F5F5F5;">
+    <div class="text-center">
+      <img src="./asserts/images/Group 574.png" width="60">
+      <h4 class="fw-bold fs-5 mt-3">Expertise</h4>
+    </div>
+    <div class="border border-dark ms-4"></div>
+     <div class="text-center">
+      <img src="./asserts/images/Group 568.png" width="60">
+      <h4 class="fw-bold fs-5 mt-3">Electrical Installation</h4>
+    </div>
+     <div class="border border-dark"></div>
+     <div class="text-center">
+      <img src="./asserts/images/Group 573.png" width="60">
+      <h4 class="fw-bold fs-5 mt-3">Safety Maintanance</h4>
+    </div>
+
+  </div>
+  <!-- Footer -->
+  <footer class="footer mt-6">
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo & Info -->
+        <div class="col-md-6 mb-4">
+          <div class="d-flex align-items-center mb-2">
+            <img src="./asserts/images/Screenshot 2025-06-12 135749.png" width="60" alt="logo">
+            <h4 class="ms-2">ZAHRIX</h4>
+          </div>
+          <p class="mt-4 mb-5">“At ZAHRIX Delivering Electrical Solutions With Precision <br>and Care”</p>
+          <div class="d-flex align-items-center my-2">
+            <div class="icon-circle"><i class="bi bi-envelope-fill"></i></div>
+            <span>Zahrix@gmail.com</span>
+          </div>
+          <div class="d-flex align-items-center my-2">
+            <div class="icon-circle"><i class="bi bi-geo-alt-fill"></i></div>
+            <span>23/9, Main Road Chennai.</span>
+          </div>
+          <div class="d-flex align-items-center my-2">
+            <div class="icon-circle"><i class="bi bi-telephone-fill"></i></div>
+            <span>+91 86456780987</span>
+          </div>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="col-md-6 mb-4">
+          <div>
+            <h5 class="ms-5 ps-4 fw-bold">Subscribe</h5>
+               <form onsubmit="handleSignup(event)">
+                    <div class="input-with-button d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                        <button type="submit" class="btn">Sign Up</button>
+                    </div>
+                </form>
+          </div>
+
+          <!-- Links -->
+          <div class="d-flex gap-5 ms-5 my-5 flex-md-nowrap flex-wrap">
+            <div class="ms-5">
+              <h6 class="fw-bold">Quick Links</h6>
+              <ul class="list-unstyled">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h6 class="fw-bold">Useful Links</h6>
+              <ul class="list-unstyled">
+                <li><a href="#">Team of use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Support</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <div class="social-icons ms-4 d-flex flex-column">
+              <a href="#"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/linkedin.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/instagram-new.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/facebook-new.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/twitter.png" /></a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          @ 2025 Developed & Maintained by ZAHRIX – All rights reserved.
+        </div>
+      </div>
+  </footer>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="./asserts/js/footer.js"></script>
+</body>
+
+</html>

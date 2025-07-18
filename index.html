@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomePage</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./asserts/css/header.css">
+  <link rel="stylesheet" href="./asserts/css/project.css">
+  <style>
+    .hero-img-container {
+      position: relative;
+    }
+
+    .floating-icon {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      padding: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      z-index: 2;
+    }
+
+    .icon1 {
+      top: 10%;
+      left: 5%;
+    }
+
+    .icon2 {
+      top: 50%;
+      left: -5%;
+      transform: translateY(-50%);
+    }
+
+    .icon3 {
+      bottom: 10%;
+      left: 10%;
+    }
+
+    .bubble-box {
+      position: absolute;
+      top: 45%;
+      /* right: 15%; */
+      left: 23%;
+      background: white;
+      border-radius: 20px;
+      padding: 10px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 5;
+    }
+
+    .bubble-box img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .card {
+      box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.3);
+      border: none;
+      /* optional */
+      padding: 1rem;
+      border-radius: 1rem;
+      /* optional for soft corners */
+    }
+
+
+    @media (max-width: 768px) {
+      .bubble-box {
+        top: 5%;
+        right: 10%;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .icon1 {
+        top: 5%;
+        left: 30%;
+      }
+
+      .icon2 {
+        top: 45%;
+        left: -5%;
+      }
+
+      .icon3 {
+        bottom: 5%;
+        left: 15%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .floating-icon {
+        padding: 6px;
+      }
+
+      .bubble-box {
+        top: auto;
+        bottom: 5%;
+        right: 5%;
+        font-size: 14px;
+      }
+    }
+
+    /* About us  */
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .back-image {
+      position: absolute;
+      bottom: -60px;
+      left: -70px;
+      width: 180px;
+      border-radius: 15px;
+      z-index: 1;
+    }
+
+    .front-image {
+      width: 100%;
+      border-radius: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .icon-top,
+    .icon-bottom {
+      position: absolute;
+      background: white;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      z-index: 3;
+    }
+
+    .icon-top {
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .icon-bottom {
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .experience-label {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: bold;
+      text-align: center;
+      color: #1d3d9f;
+    }
+
+    @media (max-width: 768px) {
+      .experience-label {
+        writing-mode: horizontal-tb;
+        transform: none;
+        text-align: left;
+      }
+    }
+
+    .learn-btn {
+      background-color: #4B69A9;
+      color: white;
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
+
+    .avatars img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: -10px;
+      border: 2px solid white;
+    }
+
+    @media (max-width: 768px) {
+      .experience-box {
+        writing-mode: horizontal-tb;
+        transform: none;
+      }
+    }
+
+    .xs {
+      margin-top: -200px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container px-5">
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <img src="./asserts/images/Screenshot 2025-06-12 135749.png" alt="Logo" width="50" height="50" class="me-2">
+        <span class="fw-bold fs-4">ZAHRIX</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" href="./aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="" id="servicesDropdown" role="button"
+              data-bs-toggle="dropdown">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="./electrical.html">Electrical</a></li>
+                            <li><a class="dropdown-item" href="./cctv.html">CCTV</a></li>
+                            <li><a class="dropdown-item" href="./bms.html">BMS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./projects.html">Projects</a>
+          </li>
+        </ul>
+      </div>
+      <a href="./contact.html" class="btn btn-light fw-semibold ms-auto">Get a Quote</a>
+    </div>
+  </nav>
+  <!-- Main Home -->
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <!-- Left Column -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h1 class="fw-bold">Transforming Safety and<br>Security With<br>Cutting-Edge Technology</h1>
+        <h5 class="fw-semibold mt-4" style="color: #4B69A9;">Empowering Your Space with Innovative Solutions</h5>
+        <p class="mt-3">
+          <strong>Zahrix</strong> provides cutting-edge electrical, CCTV, and BMS services to enhance your building's
+          efficiency, safety, and security. Trust us to illuminate your world. Our expertise ensures a safer, more
+          secure, and efficient environment. We design, install, and maintain systems that protect people, property, and
+          assets.
+        </p>
+        <a href="./services.html" class="btn mt-3 ms-3 px-4 py-2 text-white" style="background-color: #4B69A9;">Discover Our
+          Services</a>
+
+        <div class="d-flex gap-3 text-center mt-5" style="color: #4B69A9;">
+          <div class="card shadow p-3">
+            <h3 class="fw-bold">500+</h3>
+            <h6>Locations in the country</h6>
+          </div>
+          <div class="card shadow p-3">
+            <h3 class="fw-bold">25+</h3>
+            <h6>Years of experience</h6>
+          </div>
+          <div class="card shadow p-3">
+            <h3 class="fw-bold">200+</h3>
+            <h6>Specialized Workers</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-6">
+        <div class="hero-img-container text-center">
+          <!-- Layer 1: Background Image 1 -->
+          <img src="./asserts/images/image 1.png" class="layer-img position-absolute"
+            style="z-index: 1; top: -100px; left: 50%; transform: translateX(-50%) scale(1); width: 100%;" alt="bg1">
+
+          <!-- Layer 2: Background Image 2 -->
+          <img src="./asserts/images/Group 538 j.png" class="layer-img position-absolute"
+            style="z-index: 2; top: -20px; left: 50%; transform: translateX(-50%) scale(0.9); width: 90%;" alt="bg2">
+
+          <!-- Layer 3: Foreground Engineer Image -->
+          <img src="./asserts/images/horizontal-shot-attractive-young-unshaven-male-builder-wearing-safety-helmet 1.png"
+            class="img-fluid position-relative" style="z-index: 3; height: 500px; object-fit: contain;" alt="Engineer">
+
+          <!-- Floating Icons -->
+          <div class="floating-icon icon1">
+            <img src="./asserts/images/Group 574.png" width="40" />
+          </div>
+          <div class="floating-icon icon2">
+            <img src="./asserts/images/Group 574.png" width="40" />
+          </div>
+          <div class="floating-icon icon3">
+            <img src="./asserts/images/Group 24.png" width="40" />
+          </div>
+
+          <!-- Speech Bubble -->
+          <div class="bubble-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="bolt" />
+            <span><strong>Unlock a safer tomorrow<br>with Zahrix!</strong></span>
+            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="check" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- About Us -->
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <!-- Left Section -->
+      <div class="col-md-6 d-flex">
+        <!-- Experience Label -->
+        <div class="me-3 text-center">
+          <h3 class="fw-bold text-primary" style="color: #4B69A9;">25</h3>
+          <div class="experience-label text-dark">Years Experiences<br>Electro Mechanical</div>
+        </div>
+
+        <!-- Image Stack -->
+        <div class="image-container ms-2">
+          <!-- Back image -->
+          <img src="./asserts/images/Rectangle 375.png" alt="Back Image" class="back-image">
+
+          <!-- Front image -->
+          <img src="./asserts/images/standard-quality-control-collage-concept.png" alt="Front Image"
+            class="front-image shadow">
+
+          <!-- Top Center Icon -->
+          <div class="icon-top">
+            <img src="./asserts/images/Group 540.png" width="24">
+          </div>
+
+          <!-- Bottom Center Icon -->
+          <div class="icon-bottom">
+            <img src="./asserts/images/Group 568.png" width="24">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="col-md-6 mt-4 mt-md-0">
+        <h2 class="fw-bold">About Us</h2>
+        <h5 class="mt-3">Welcome to Zahrix!</h5>
+        <h3 class="fw-bold" style="color: #4B69A9;">Empowering Your Space,<br>Enhancing Your Life</h3>
+        <p class="mt-3">
+          At ZAH RIX, we're dedicated to delivering innovative electrical, CCTV, and Building Management System (BMS)
+          solutions.
+          Our expertise ensures a safer, more secure, and efficient environment for homes, businesses, and communities.
+          With cutting-edge technology and exceptional service, we empower your space to reach its full potential.
+          Trust us to illuminate your world with innovative solutions.
+        </p>
+        <div class="d-flex justify-content-between">
+          <a href="./aboutus.html"><button class="learn-btn btn mt-3">
+            <i class="bi bi-lightning-charge"></i> Learn More
+          </button></a>
+          <div class="mt-4">
+            <h6 class="fw-bold">Meet Our Expert Team !</h6>
+            <div class="avatars d-flex mt-2">
+              <img src="./asserts/images/Ellipse 62.png" alt="member1">
+              <img src="./asserts/images/Ellipse 63.png" alt="member2">
+              <img src="./asserts/images/Ellipse 64.png" alt="member3">
+              <img src="./asserts/images/Ellipse 65.png" alt="member4">
+              <img src="./asserts/images/Ellipse 66.png" alt="member5">
+              <img src="./asserts/images/Ellipse 69.png" alt="member5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Services Offered -->
+  <h3 class="text-center mt-5 fw-bold mt-5">Our Services
+    <span><img src="./asserts/images/material-symbols_electric-bolt-outline.png" alt="bolt icon"></span>
+  </h3>
+  <h4 class="text-center fw-bold" style="color: #4B69A9;">Expert Services for a Smarter,Safer World</h4>
+
+  <section class="container py-5">
+    <div class="row g-4 align-items-stretch">
+
+      <!-- Hero Image (Top Left) -->
+      <div class="col-lg-4 d-flex">
+        <div class="w-100 h-50 position-relative rounded overflow-hidden">
+          <img src="./asserts/images/Rectangle 47.png" alt="Electrical Work"
+            class="img-fluid w-100 h-100 object-fit-cover">
+          <div
+            class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-white text-center p-3"
+            style="background-color: rgba(0,0,0,0.4); border-radius:40px ;">
+            <h5 class="fw-bold m-0">“Experience the best in electrical,<br>CCTV, BMS Solutions“</h5>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Electrical Installation (Top Right - Wider) -->
+      <div class="col-lg-7 d-flex">
+        <div class="p-4 rounded shadow-sm w-100 h-50" style="border: 1px solid #d9d6d6; background-color:  #F5F5F5;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="./asserts/images/Group 534.png" width="60">
+            <h5 class="mb-0 fw-bold ms-4" style="color: #4B69A9;">Electrical Installation</h5>
+          </div>
+          <p class="text-muted mb-0" style="font-size: 14px;">
+            Expert electrical installation services for new builds, renovations, and upgrades. Our licensed electricians
+            ensure safe, efficient, and reliable electrical systems. From lighting to power distribution, we handle it
+            all. Trust us to get the job done right.
+          </p>
+        </div>
+      </div>
+
+      <!-- Energy Efficiency (Bottom Left - Wider) -->
+      <div class="col-lg-7 d-flex xs">
+        <div class="bg-light p-4 rounded shadow-sm w-100 h-100"
+          style="border: 1px solid #d9d6d6; background-color:  #F5F5F5;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="./asserts/images/Group 538 j.png" width="60">
+            <h5 class="mb-0 fw-bold ms-4" style="color: #4B69A9;">Energy Efficiency Solutions</h5>
+          </div>
+          <p class="text-muted mb-0" style="font-size: 14px;">
+            Expert energy efficiency solutions to reduce energy consumption and lower costs. Our team implements
+            energy-saving technologies like LED lighting and solar panels. Go green and save money with our sustainable
+            solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Electrical Repairs (Bottom Right - Narrow) -->
+      <div class="col-lg-4 d-flex xs">
+        <div class="bg-light p-4 rounded shadow-sm w-100 h-100"
+          style="border: 1px solid #d9d6d6; background-color:  #F5F5F5;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="./asserts/images/Group 608.png" width="60">
+            <h5 class="mb-0 fw-bold ms-4" style="color: #4B69A9;">Electrical Repairs</h5>
+          </div>
+          <p class="text-muted mb-0" style="font-size: 14px;">
+            Expert electrical repair services to fix faults, prevent downtime, and ensure safety. Our licensed
+            electricians diagnose and rectify issues quickly.
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center mt-5">
+      <a href="./services.html"><button class="btn px-2 text-white fs-6 fw-semibold"
+          style="background-color: #4B69A9;"><span><img
+              src="./asserts/images/material-symbols_drag-click-rounded.png"></span>Book Now</button></a>
+    </div>
+  </section>
+
+  <!-- Project Section -->
+  <div class="text-center mt-5">
+    <h2 class="fw-bold fs-4">OUR PROJ<span class="mt-2 underline">ECTS </span><span><img class=""
+          src="./asserts/images/material-symbols_electric-bolt-outline.png"></span></h2>
+    <p class="fw-bold fs-4" style="color: #4B69A9;">Electric Solutions for a Brighter Environment</p>
+  </div>
+  <!-- Section 1  -->
+  <section class="py-5" id="sections">
+    <div class="container text-center">
+      <h1 class="fw-bold" style="color: #4B69A9;">01</h1>
+      <h3 class="fw-bold mb-4">Electrical Upgrade at ZAHRIX Office Complex</h3>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img src="./asserts/images/Screenshot 2025-06-12 102855.png" alt="Electrical Work 1"
+                class="card-img-top img-fluid w-100 rounded" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Site Inspection</h5>
+              <p class="small mb-5">Ensuring quality and safety standards through expert site evaluations and upgrades.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img
+                src="./asserts/images/renovation-profile-concentrated-man-touching-screwdriver-lamp-kitchen-range-hood.png"
+                alt="Electrical Work 2" class="card-img-top img-fluid w-100" style="border-radius: 8px;" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Wiring</h5>
+              <p class="small mb-5">Efficient electrical wiring solutions with top-grade materials and expert
+                installation techniques.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card-hover rounded overflow-visible position-relative shadow-sm">
+            <div class="card-img-container">
+              <img src="./asserts/images/electrician-overalls-focused-work-switchboard-with-fuses-using-tablet.png"
+                alt="Electrical Work 3" class="card-img-top img-fluid w-100 rounded" />
+              <div class="icon-wrapper">
+                <div class="blue-icon-circle">
+                  <i class="bi bi-arrow-up-right text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+              <h5 class="fw-bold mb-2">Panel Fixing</h5>
+              <p class="small mb-5">Professional panel fixing ensuring operational safety, efficiency, and system
+                longevity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="./projects.html"><button class="btn px-2 text-white fs-6 fw-semibold"
+          style="background-color: #4B69A9;"><span><img
+              src="./asserts/images/material-symbols_drag-click-rounded.png"></span>View All Works</button></a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+   <section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">OUR TESTIMONIALS <span><img class=""
+          src="./asserts/images/material-symbols_electric-bolt-outline.png"></span></h2>
+      <p class="fs-5" style="color: #4B69A9;">Real People, Real Results</p>
+    </div>
+
+    <!-- Carousel Start -->
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <!-- Testimonial 1 -->
+            <div class="col-md-6">
+        <div class="bg-white shadow p-4 position-relative" style="border-top-left-radius: 25px; border-top-right-radius: 25px;">
+
+                <div class="d-flex align-items-center mb-3">
+                
+                  <div class="text-white px-3 py-1 rounded-pill d-flex" style="background-color: #4B69A9;">
+                      <img src="./asserts/images/Ellipse 69.png" class="rounded-circle me-3" width="50" height="50">
+                      <div>
+                    <strong>Priya Patel</strong><br>
+                    <small>Homeowner</small>
+                    </div>
+                  </div>
+                  <div class="ms-auto text-warning fs-5">★★★★★</div>
+                </div>
+                <p class="fw-semibold mb-0" style="color: #4B69A9;">
+                  “The electrical panel upgrade done by ZAHIRX was seamless. Their electricians were courteous, knowledgeable, and provided excellent customer service. I'm thrilled with the results!”
+                </p>
+                <div class="position-absolute bottom-0 end-0 text-secondary fs-2 pe-3 pb-2">”</div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="col-md-6">
+              <div class="bg-white shadow p-4 position-relative" style="border-top-left-radius: 25px; border-top-right-radius: 25px;">
+
+                <div class="d-flex align-items-center mb-3">
+                 
+                  <div class=" text-white px-3 py-1 rounded-pill d-flex" style="background-color: #4B69A9;">
+                     <img src="./asserts/images/hjj.png" class="rounded-circle me-3" width="50" height="50">
+                     <div>
+                    <strong>Rahul Sharma</strong><br>
+                    <small>Facility Manager</small>
+                    </div>
+                  </div>
+                  <div class="ms-auto text-warning fs-5">★★★★★</div>
+                </div>
+                <p class="fw-semibold mb-0" style="color: #4B69A9;">
+                  “ZAHIRX Electrical Services delivered exceptional work on our office electrical upgrade. Their team was professional, efficient, and completed the project on time. Highly recommended!”
+                </p>
+                <div class="position-absolute bottom-0 end-0 text-secondary fs-2 pe-3 pb-2">”</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <!-- Testimonial 3 -->
+            <div class="col-md-6">
+              <div class="bg-white shadow p-4 position-relative" style="border-top-left-radius: 25px; border-top-right-radius: 25px;">
+
+                <div class="d-flex align-items-center mb-3">
+                 
+                  <div class="text-white px-3 py-1 rounded-pill d-flex" style="background-color: #4B69A9;">
+                     <img src="./asserts/images/Ellipse 69.png" class="rounded-circle me-3" width="50" height="50">
+                    <div>
+                     <strong>Meera Iyer</strong><br>
+                    <small>Architect</small>
+                    </div>
+                  </div>
+                  <div class="ms-auto text-warning fs-5">★★★★★</div>
+                </div>
+                <p class="fw-semibold mb-0" style="color: #4B69A9;">
+                   “ZAHIRX Electrical Services delivered exceptional work on our office electrical upgrade. Their team was professional, efficient, and completed the project on time. Highly recommended!”
+                
+                </p>
+                <div class="position-absolute bottom-0 end-0 text-secondary fs-2 pe-3 pb-2">”</div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="col-md-6">
+              <div class="bg-white shadow p-4 position-relative" style="border-top-left-radius: 25px; border-top-right-radius: 25px;">
+
+                <div class="d-flex align-items-center mb-3">
+                  
+                  <div class="text-white px-3 py-1 rounded-pill d-flex" style="background-color: #4B69A9;">
+                    <img src="./asserts/images/hjj.png" class="rounded-circle me-3" width="50" height="50">
+                    <div>
+                    <strong>Arjun Mehta</strong><br>
+                    <small>Restaurant Owner</small>
+                    </div>
+                  </div>
+                  <div class="ms-auto text-warning fs-5">★★★★★</div>
+                </div>
+                <p class="fw-semibold mb-0" style="color: #4B69A9;">
+               “ZAHIRX Electrical Services delivered exceptional work on our office electrical upgrade. Their team was professional, efficient, and completed the project on time. Highly recommended!”
+                
+                </p>
+                <div class="position-absolute bottom-0 end-0 text-secondary fs-2 pe-3 pb-2">”</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <div class="text-center mt-4">
+        <button class="btn me-2 text-white" type="button" style="background-color: #4B69A9;" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          &lt;
+        </button>
+        <button class="btn text-white" type="button" style="background-color: #4B69A9;"  data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          &gt;
+        </button>
+      </div>
+    </div>
+    <!-- Carousel End -->
+  </div>
+</section>
+
+<div class="text-center">
+  <h2 style="color: #4B69A9;">Lets's Connect</h2>
+  <p>Contact us to know more about our services</p>
+
+</div>
+
+  <!-- Footer -->
+  <footer class="footer mt-6">
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo & Info -->
+        <div class="col-md-6 mb-4">
+          <div class="d-flex align-items-center mb-2">
+            <img src="./asserts/images/Screenshot 2025-06-12 135749.png" width="60" alt="logo">
+            <h4 class="ms-2">ZAHRIX</h4>
+          </div>
+          <p class="mt-4 mb-5">“At ZAHRIX Delivering Electrical Solutions With Precision <br>and Care”</p>
+          <div class="d-flex align-items-center my-2">
+            <div class="icon-circle"><i class="bi bi-envelope-fill"></i></div>
+            <span>Zahrix@gmail.com</span>
+          </div>
+          <div class="d-flex align-items-center my-2">
+            <div class="icon-circle"><i class="bi bi-geo-alt-fill"></i></div>
+            <span>23/9, Main Road Chennai.</span>
+          </div>
+          <div class="d-flex align-items-center my-2">
+            <div class="icon-circle"><i class="bi bi-telephone-fill"></i></div>
+            <span>+91 86456780987</span>
+          </div>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="col-md-6 mb-4">
+          <div>
+            <h5 class="ms-5 ps-4 fw-bold">Subscribe</h5>
+            <form onsubmit="handleSignup(event)">
+              <div class="input-with-button d-flex">
+                <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                <button type="submit" class="btn">Sign Up</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Links -->
+          <div class="d-flex gap-5 ms-5 my-5 flex-md-nowrap flex-wrap">
+            <div class="ms-5">
+              <h6 class="fw-bold">Quick Links</h6>
+              <ul class="list-unstyled">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h6 class="fw-bold">Useful Links</h6>
+              <ul class="list-unstyled">
+                <li><a href="#">Team of use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Support</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <div class="social-icons ms-4 d-flex flex-column">
+              <a href="#"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/linkedin.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/instagram-new.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/facebook-new.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/twitter.png" /></a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          @ 2025 Developed & Maintained by ZAHRIX – All rights reserved.
+        </div>
+      </div>
+  </footer>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="./asserts/js/footer.js"></script>
+</body>
+
+</html>

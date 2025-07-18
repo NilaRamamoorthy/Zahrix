@@ -1,0 +1,79 @@
+
+    /* LightBox Effects */
+
+    #sections {
+      background-color: #F5F5F5;
+    }
+
+    .card-img-container {
+      position: relative;
+      height: 440px;
+      overflow: visible;
+    }
+
+    .card-img-container img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .icon-wrapper {
+      position: absolute;
+      top: calc(100% + -25px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card-hover:hover .icon-wrapper {
+      opacity: 1;
+    }
+
+    .blue-icon-circle {
+      width: 48px;
+      height: 48px;
+      background-color: #4B69A9;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-hover {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      overflow: visible;
+      z-index: 1;
+    }
+
+    .card-hover:hover {
+      transform: translateY(30px);
+    }
+
+    .card-hover .overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 10;
+      border-radius: 15px;
+    }
+
+    .card-hover:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h5,
+    .overlay p {
+      color: #fff;
+    }
+
+   .border{
+    border: 2px solid black;
+    
+   }
